@@ -22,6 +22,11 @@ scrape_configs:
     scrape_interval: 5s
     static_configs:
       - targets: ['cadvisor:8080']
+  
+  - job_name: 'flask-app'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:7000']
 
   - job_name: 'prometheus'
     scrape_interval: 10s
